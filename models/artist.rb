@@ -14,7 +14,7 @@ class Artist
     RETURNING id"
     values = [@artist_name]
     result = SqlRunner.run(sql, values)
-    @id = result[0]["id"].to_i
+    @id = result[0]["id"].to_i()
   end
 
   def self.delete_all()
